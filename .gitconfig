@@ -1,0 +1,23 @@
+[gpg]
+	format = ssh
+
+[gpg "ssh"]
+	program = "/opt/1Password/op-ssh-sign"
+
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP+6Z+KzWEnlhrld1FHtyS+ErXl/3SGlbeXAXPA006Tx
+	email = git@dafnik.me
+	name = Dafnik
+
+[commit]
+	gpgSign = true
+
+[tag]
+	forceSignAnnotated = true
+
+[init]
+	defaultBranch = main
+
+[core]
+	autocrlf = input
+	fileMode = false
