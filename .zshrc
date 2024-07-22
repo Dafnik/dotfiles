@@ -33,32 +33,40 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 # zoxide config
 eval "$(zoxide init zsh)"
 
-# OnePassword
-export SSH_AUTH_SOCK=~/.1password/agent.sock
+if [[ "$OSTYPE" == "linux-gnu"* ]]; then
+    # OnePassword
+    export SSH_AUTH_SOCK=~/.1password/agent.sock
 
-# Chrome Bin
-export CHROME_BIN="/var/lib/flatpak/app/io.github.ungoogled_software.ungoogled_chromium/current/active/export/bin/io.github.ungoogled_software.ungoogled_chromium"
+    # Chrome Bin
+    export CHROME_BIN="/var/lib/flatpak/app/io.github.ungoogled_software.ungoogled_chromium/current/active/export/bin/io.github.ungoogled_software.ungoogled_chromium"
 
-# fnm
-FNM_PATH="/home/dafnik/.local/share/fnm"
-if [ -d "$FNM_PATH" ]; then
-  export PATH="/home/dafnik/.local/share/fnm:$PATH"
-  eval "`fnm env`"
+    # fnm
+    FNM_PATH="/home/dafnik/.local/share/fnm"
+    if [ -d "$FNM_PATH" ]; then
+        export PATH="/home/dafnik/.local/share/fnm:$PATH"
+        eval "`fnm env`"
+    fi
+
+    # pnpm
+    export PNPM_HOME="/home/dafnik/.local/share/pnpm"
+    case ":$PATH:" in
+        *":$PNPM_HOME:"*) ;;
+        *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
+
+    # lazydocker
+    alias lazydocker="/home/dafnik/.local/bin/lazydocker"
+
+elif [[ "$OSTYPE" == "darwin"* ]]; then
+    export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 fi
 
+# fnm
 eval "$(fnm env --use-on-cd)"
-
-# pnpm
-export PNPM_HOME="/home/dafnik/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
 
 # Aliases
 alias pn=pnpm
 alias pnx="pnpm dlx"
-alias lazydocker="/home/dafnik/.local/bin/lazydocker"
 alias ld=lazydocker
 alias vim=nvim
 alias ls="ls -la"
