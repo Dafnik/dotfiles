@@ -145,7 +145,6 @@ nnoremap qj @q
 inoremap <C-j> <Action>(PopupMenu-selectNext)
 inoremap <C-k> <Action>(PopupMenu-selectPrev)
 
-
 "" Leader commands
 "" ========================================================
 
