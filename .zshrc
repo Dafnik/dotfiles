@@ -104,6 +104,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # MAKE SURE USER IS ALLOWED TO WRITE INTO THIS FOLDER
     mkdir -p /opt/1Password
     ln -s -f /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
+
+    source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+    source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+    chruby ruby-3.3.5
+
 fi
 
 # Shell integrations
