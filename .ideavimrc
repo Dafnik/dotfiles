@@ -210,5 +210,5 @@ map <leader>gs <Action>(ActivateVersionControlToolWindow)
 map <leader>gg <Action>(Git.Branches)
 
 " Errors
-map <leader>en <Action>(ReSharperGotoNextErrorInSolution)
-map <leader>ep <Action>(ReSharperGotoPrevErrorInSolution)
+map <leader>en <Action>(GotoNextError)
+map <leader>ep <Action>(GotoPreviousError)
