@@ -107,7 +107,7 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
 
     source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
     source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-    chruby ruby-3.3.5
+    chruby ruby-3.3.6
 
 fi
 
