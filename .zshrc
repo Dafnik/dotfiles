@@ -115,3 +115,7 @@ fi
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
 eval "$(fnm env --use-on-cd)"
+
+killPort() {
+    sudo kill -9 $(sudo lsof -t -i:$1) 2>/dev/null && echo "Killed process on port $1" || echo "No process found on port $1"
+}
