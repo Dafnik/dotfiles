@@ -142,8 +142,10 @@ vnoremap > >gv
 nnoremap qj @q
 
 " Popup navigation
-inoremap <C-j> <Action>(PopupMenu-selectNext)
-inoremap <C-k> <Action>(PopupMenu-selectPrev)
+" inoremap <C-j> <Action>(PopupMenu-selectNext)
+" inoremap <C-k> <Action>(PopupMenu-selectPrev)
+map <C-j> <Action>(PopupMenu-selectnext)
+map <C-k> <Action>(PopupMenu-selectprev)
 
 "" Leader commands
 "" ========================================================
@@ -174,8 +176,6 @@ map <leader>df <action>(ToggleFullScreen)
 
 " Actions
 map <leader>am <action>(ShowIntentionActions)
-map <leader>as <action>(SearchEverywhere)
-
 " File navigation
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)

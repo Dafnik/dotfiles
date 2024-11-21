@@ -1,17 +1,3 @@
-[gpg]
-	format = ssh
-
-[user]
-	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP+6Z+KzWEnlhrld1FHtyS+ErXl/3SGlbeXAXPA006Tx
-	email = git@dafnik.me
-	name = Dafnik
-
-[gpg "ssh"]
-        program = "/opt/1Password/op-ssh-sign"
-
-[commit]
-	gpgSign = true
-
 [tag]
 	forceSignAnnotated = true
 
@@ -21,3 +7,18 @@
 [core]
 	autocrlf = input
 	fileMode = false
+
+[gpg]
+	format = ssh
+
+[user]
+	signingkey = ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIP+6Z+KzWEnlhrld1FHtyS+ErXl/3SGlbeXAXPA006Tx
+	email = git@dafnik.me
+	name = Dafnik
+
+[gpg "ssh"]
+    program = "/opt/1Password/op-ssh-sign"
+
+[commit]
+	gpgSign = true
+

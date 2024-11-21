@@ -101,8 +101,14 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # 1Password
     export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
 
+    # MAKE SURE USER IS ALLOWED TO WRITE INTO THIS FOLDER
     mkdir -p /opt/1Password
-    ln -s /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
+    ln -s -f /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
+
+    source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
+    source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
+    chruby ruby-3.3.6
+
 fi
 
 # Shell integrations
