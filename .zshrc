@@ -105,10 +105,6 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     mkdir -p /opt/1Password
     ln -s -f /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
 
-    source $(brew --prefix)/opt/chruby/share/chruby/chruby.sh
-    source $(brew --prefix)/opt/chruby/share/chruby/auto.sh
-    chruby ruby-3.3.6
-
 fi
 
 # Shell integrations
