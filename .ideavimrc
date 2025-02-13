@@ -141,11 +141,11 @@ vnoremap > >gv
 " Execute macro saved in 'q' register
 nnoremap qj @q
 
-" Popup navigation
-" inoremap <C-j> <Action>(PopupMenu-selectNext)
-" inoremap <C-k> <Action>(PopupMenu-selectPrev)
-map <C-j> <Action>(PopupMenu-selectnext)
-map <C-k> <Action>(PopupMenu-selectprev)
+" Popup navigation (works with IDE Up / Down Keybindings)
+" nnoremap <C-j> <Action>(PopupMenu-selectNext)
+" nnoremap <C-k> <Action>(PopupMenu-selectPrev)
+"map <C-j> <Action>(PopupMenu-selectnext)
+"map <C-k> <Action>(PopupMenu-selectprev)
 
 "" Leader commands
 "" ========================================================
@@ -212,3 +212,8 @@ map <leader>gg <Action>(Git.Branches)
 " Errors
 map <leader>en <Action>(GotoNextError)
 map <leader>ep <Action>(GotoPreviousError)
+
+" Jump points
+map <leader>jt /template:<CR>
+map <leader>js /styles:<CR>
+map <leader>jc /export class<CR>

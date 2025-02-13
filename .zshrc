@@ -89,10 +89,12 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     fi
 
     # pnpm
-    PNPM_HOME="/home/dafnik/.local/share/pnpm"
-    if [ -d "$PNPM_HOME" ]; then
-        export PATH="$PNPM_HOME:$PATH"
-    fi
+    export PNPM_HOME="/home/dafnik/.local/share/pnpm"
+    case ":$PATH:" in
+      *":$PNPM_HOME:"*) ;;
+      *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
+    # pnpm end
 
     # lazydocker
     alias lazydocker="/home/dafnik/.local/bin/lazydocker"
