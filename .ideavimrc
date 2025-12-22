@@ -47,8 +47,8 @@ set nerdtree
 inoremap jk <Esc>
 
 " Tab navigation
-nnoremap <A-n> :tabnext<CR>
-nnoremap <A-P> :tabprev<CR>
+nmap <A-n> <Action>(NextTab)
+nmap <A-p> <Action>(PreviousTab)
 
 " Pane navigation
 nnoremap <A-h> <C-w>h
