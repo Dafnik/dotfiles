@@ -39,7 +39,7 @@ set sneak
 set nerdtree
 
 " Easymotion settings
-set easymotion
+" set easymotion
 set notimeout
 
 " Which-key settings
@@ -53,8 +53,8 @@ let g:WhichKeyDesc_leader = "<leader> Leader key"
 
 let g:WhichKeyDesc_leader = "<leader>x Open file explorer"
 
-let g:WhichKeyDesc_easymotion = "<leader>j Jump with Easymotion"
-let g:WhichKeyDesc_easymotion_prefix = "<leader><leader>"
+" let g:WhichKeyDesc_easymotion = "<leader>j Jump with Easymotion"
+" let g:WhichKeyDesc_easymotion_prefix = "<leader><leader>"
 
 let g:WhichKeyDesc_comment = "<leader>c Comment line"
 
@@ -154,7 +154,7 @@ nnoremap qj @q
 map <leader>c <action>(CommentByLineComment)
 
 " Jump around with easymotion
-map <leader>j <Plug>(easymotion-s)
+" map <leader>j <Plug>(easymotion-s)
 
 " Open NERDTree (use q to exit)
 map <leader>x :NERDTreeToggle<CR>
@@ -180,7 +180,7 @@ map <leader>am <action>(ShowIntentionActions)
 " File navigation
 map <leader>ff <action>(GotoFile)
 map <leader>fr <action>(RecentFiles)
-map <leader>fc <action>(FindInPath)
+map <leader>fi <action>(FindInPath)
 map <leader><leader> <Action>(RecentFiles)
 map <leader>fl <action>(RecentLocations)
 map <leader>fs <action>(NewScratchFile)
@@ -195,6 +195,10 @@ map <leader>rv <Action>(IntroduceVariable)
 map <leader>rf <Action>(IntroduceField)
 map <leader>rs <Action>(ChangeSignature)
 map <leader>rr <Action>(Refactorings.QuickListPopupAction)
+
+" Move lines up and down
+vnoremap <C-j> :m'>+<CR>gv=gv
+vnoremap <C-k> :m-2<CR>gv=gv
 
 " Go to code
 nmap <leader>gd <Action>(GotoDeclaration)
