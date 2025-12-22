@@ -99,6 +99,14 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # lazydocker
     alias lazydocker="/home/dafnik/.local/bin/lazydocker"
 
+    # Jetbrains
+    JETBRAINS_PATH="/home/dafnik/.local/share/JetBrains/Toolbox/scripts"
+    if [ -d "$JETBRAINS_PATH" ]; then
+        export PATH="$JETBRAINS_PATH:$PATH"
+    fi
+
+    function intellij() { ( idea "$@" & ) > /dev/null 2>&1 }
+
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # 1Password
     export SSH_AUTH_SOCK=~/Library/Group\ Containers/2BUA8C4S2C.com.1password/t/agent.sock
