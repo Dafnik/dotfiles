@@ -115,6 +115,13 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     mkdir -p /opt/1Password
     ln -s -f /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
 
+    # pnpm
+    export PNPM_HOME="/Users/dafnik/Library/pnpm"
+    case ":$PATH:" in
+      *":$PNPM_HOME:"*) ;;
+      *) export PATH="$PNPM_HOME:$PATH" ;;
+    esac
+    # pnpm end
 fi
 
 # Shell integrations
