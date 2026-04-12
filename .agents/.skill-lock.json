@@ -1,0 +1,59 @@
+{
+  "version": 3,
+  "skills": {
+    "find-skills": {
+      "source": "vercel-labs/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/vercel-labs/skills.git",
+      "skillPath": "skills/find-skills/SKILL.md",
+      "skillFolderHash": "c2f31172b6f256272305a5e6e7228b258446899f",
+      "installedAt": "2026-02-10T09:45:09.428Z",
+      "updatedAt": "2026-02-10T09:45:09.428Z"
+    },
+    "frontend-design": {
+      "source": "anthropics/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/anthropics/skills.git",
+      "skillPath": "skills/frontend-design/SKILL.md",
+      "skillFolderHash": "928950704df8a8b885c03de5da626331e6f29cf8",
+      "pluginName": "example-skills",
+      "installedAt": "2026-04-12T18:02:02.796Z",
+      "updatedAt": "2026-04-12T18:02:02.796Z"
+    },
+    "angular-developer": {
+      "source": "angular/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/angular/skills.git",
+      "skillPath": "angular-developer/SKILL.md",
+      "skillFolderHash": "3ef1dfd92b6c9f129094d3589550fdf4d46dbc15",
+      "installedAt": "2026-04-12T18:05:44.915Z",
+      "updatedAt": "2026-04-12T18:05:44.915Z"
+    },
+    "angular-new-app": {
+      "source": "angular/skills",
+      "sourceType": "github",
+      "sourceUrl": "https://github.com/angular/skills.git",
+      "skillPath": "angular-new-app/SKILL.md",
+      "skillFolderHash": "031ae4c0797d581045d9139962b3773cf5c11921",
+      "installedAt": "2026-04-12T18:05:44.959Z",
+      "updatedAt": "2026-04-12T18:05:44.959Z"
+    }
+  },
+  "dismissed": {
+    "findSkillsPrompt": true
+  },
+  "lastSelectedAgents": [
+    "amp",
+    "antigravity",
+    "cline",
+    "codex",
+    "cursor",
+    "deepagents",
+    "firebender",
+    "gemini-cli",
+    "github-copilot",
+    "kimi-cli",
+    "opencode",
+    "warp"
+  ]
+}
