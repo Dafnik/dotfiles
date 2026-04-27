@@ -74,6 +74,11 @@ alias vim='nvim'
 alias c='clear'
 alias pnx='pnpm dlx'
 
+# Redirect npx to pnpm dlx
+npx() {
+  pnpm dlx "$@"
+}
+
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # 1Password
     export SSH_AUTH_SOCK=~/.1password/agent.sock
