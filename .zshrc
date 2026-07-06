@@ -86,12 +86,9 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Chrome Bin
     export CHROME_BIN="/var/lib/flatpak/app/io.github.ungoogled_software.ungoogled_chromium/current/active/export/bin/io.github.ungoogled_software.ungoogled_chromium"
 
-    # fnm
-    FNM_PATH="/home/dafnik/.local/share/fnm"
-    if [ -d "$FNM_PATH" ]; then
-        export PATH="$FNM_PATH:$PATH"
-        eval "$(fnm env --use-on-cd)"
-    fi
+    # volta
+    export VOLTA_HOME="$HOME/.volta"
+    export PATH="$VOLTA_HOME/bin:$PATH"
 
     # pnpm
     export PNPM_HOME="/home/dafnik/.local/share/pnpm"
@@ -132,7 +129,6 @@ fi
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
-eval "$(fnm env --use-on-cd)"
 
 killPort() {
     sudo kill -9 $(sudo lsof -t -i:$1) 2>/dev/null && echo "Killed process on port $1" || echo "No process found on port $1"
