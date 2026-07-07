@@ -86,10 +86,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Chrome Bin
     export CHROME_BIN="/var/lib/flatpak/app/io.github.ungoogled_software.ungoogled_chromium/current/active/export/bin/io.github.ungoogled_software.ungoogled_chromium"
 
-    # volta
-    export VOLTA_HOME="$HOME/.volta"
-    export PATH="$VOLTA_HOME/bin:$PATH"
-
     # pnpm
     export PNPM_HOME="/home/dafnik/.local/share/pnpm"
     case ":$PATH:" in
@@ -116,15 +112,11 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     # MAKE SURE USER IS ALLOWED TO WRITE INTO THIS FOLDER
     mkdir -p /opt/1Password
     ln -s -f /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
-
-    # pnpm
-    export PNPM_HOME="/Users/dafnik/Library/pnpm"
-    case ":$PATH:" in
-      *":$PNPM_HOME:"*) ;;
-      *) export PATH="$PNPM_HOME:$PATH" ;;
-    esac
-    # pnpm end
 fi
+
+# volta
+export VOLTA_HOME="$HOME/.volta"
+export PATH="$VOLTA_HOME/bin:$PATH"
 
 # Shell integrations
 eval "$(fzf --zsh)"
