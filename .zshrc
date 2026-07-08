@@ -114,9 +114,8 @@ elif [[ "$OSTYPE" == "darwin"* ]]; then
     ln -s -f /Applications/1Password.app/Contents/MacOS/op-ssh-sign /opt/1Password/op-ssh-sign
 fi
 
-# volta
-export VOLTA_HOME="$HOME/.volta"
-export PATH="$VOLTA_HOME/bin:$PATH"
+# Vite+ bin (https://viteplus.dev)
+. "$HOME/.vite-plus/env"
 
 # Shell integrations
 eval "$(fzf --zsh)"
