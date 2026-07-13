@@ -86,14 +86,6 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # Chrome Bin
     export CHROME_BIN="/var/lib/flatpak/app/io.github.ungoogled_software.ungoogled_chromium/current/active/export/bin/io.github.ungoogled_software.ungoogled_chromium"
 
-    # pnpm
-    export PNPM_HOME="/home/dafnik/.local/share/pnpm"
-    case ":$PATH:" in
-      *":$PNPM_HOME:"*) ;;
-      *) export PATH="$PNPM_HOME:$PATH" ;;
-    esac
-    # pnpm end
-
     # lazydocker
     alias lazydocker="/home/dafnik/.local/bin/lazydocker"
 
