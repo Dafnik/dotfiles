@@ -96,6 +96,7 @@ if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     fi
 
     function intellij() { ( idea "$@" & ) > /dev/null 2>&1 }
+    function code() { ( webstorm "$@" & ) > /dev/null 2>&1 }
 
 elif [[ "$OSTYPE" == "darwin"* ]]; then
     # 1Password
@@ -115,4 +116,8 @@ eval "$(zoxide init --cmd cd zsh)"
 
 killPort() {
     sudo kill -9 $(sudo lsof -t -i:$1) 2>/dev/null && echo "Killed process on port $1" || echo "No process found on port $1"
+}
+
+cloc() {
+    pnpm dlx cloc . --fullpath --exclude-dir=node_modules,.pnpm,.pnpm-store,.npm,.yarn,.git,.cache,.angular,.astro,.turbo,.nx,.next,.nuxt,.svelte-kit,.vite,.parcel-cache,.vercel,.netlify,.serverless,.wrangler,dist,build,out,coverage,storybook-static,tmp,temp,vendor,generated,.output --not-match-f='(^|/)(pnpm-lock\.yaml|package-lock\.json|npm-shrinkwrap\.json|yarn\.lock|bun\.lockb?|.*\.min\.(js|css)|.*\.map)$'
 }
