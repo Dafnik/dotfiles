@@ -1,10 +1,3 @@
-# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
-# Initialization code that may require console input (password prompts, [y/n]
-# confirmations, etc.) must go above this block; everything else may go below.
-if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
-  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
-fi
-
 if [[ -f "/opt/homebrew/bin/brew" ]] then
   # If you're using macOS, you'll want this enabled
   eval "$(/opt/homebrew/bin/brew shellenv)"
@@ -22,9 +15,6 @@ fi
 # Source/Load zinit
 source "${ZINIT_HOME}/zinit.zsh"
 
-# Add in Powerlevel10k
-zinit ice depth=1; zinit light romkatv/powerlevel10k
-
 # Add in zsh plugins
 zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
@@ -38,10 +28,8 @@ zinit snippet OMZP::command-not-found
 # Load completions
 autoload -Uz compinit && compinit
 
+# Replay completion definitions captured while loading plugins
 zinit cdreplay -q
-
-# To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
 # Keybindings
 bindkey -e
@@ -74,11 +62,6 @@ alias vim='nvim'
 alias c='clear'
 alias pnx='pnpm dlx'
 
-# Redirect npx to pnpm dlx
-npx() {
-  pnpm dlx "$@"
-}
-
 if [[ "$OSTYPE" == "linux-gnu"* ]]; then
     # 1Password
     export SSH_AUTH_SOCK=~/.1password/agent.sock
@@ -110,14 +93,21 @@ fi
 # Vite+ bin (https://viteplus.dev)
 . "$HOME/.vite-plus/env"
 
-# Shell integrations
-eval "$(fzf --zsh)"
-eval "$(zoxide init --cmd cd zsh)"
-
 killPort() {
     sudo kill -9 $(sudo lsof -t -i:$1) 2>/dev/null && echo "Killed process on port $1" || echo "No process found on port $1"
 }
 
+# Redirect npx to pnpm dlx
+npx() {
+  pnpm dlx "$@"
+}
+
+
 cloc() {
     pnpm dlx cloc . --fullpath --exclude-dir=node_modules,.pnpm,.pnpm-store,.npm,.yarn,.git,.cache,.angular,.astro,.turbo,.nx,.next,.nuxt,.svelte-kit,.vite,.parcel-cache,.vercel,.netlify,.serverless,.wrangler,dist,build,out,coverage,storybook-static,tmp,temp,vendor,generated,.output --not-match-f='(^|/)(pnpm-lock\.yaml|package-lock\.json|npm-shrinkwrap\.json|yarn\.lock|bun\.lockb?|.*\.min\.(js|css)|.*\.map)$'
 }
+
+# Shell integrations
+eval "$(fzf --zsh)"
+eval "$(zoxide init --cmd cd zsh)"
+eval "$(oh-my-posh init zsh --config "$HOME/.config/omp.toml")"
