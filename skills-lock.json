@@ -5,7 +5,7 @@
       "source": "angular/skills",
       "sourceType": "github",
       "skillPath": "angular-developer/SKILL.md",
-      "computedHash": "a81aa1140231670d5572f4a621ae5ac38b1dac776debd45fb9e3188c71c8cc99"
+      "computedHash": "b347918e4684319dabde773c882cce231a738454166a221684f991a6197749eb"
     },
     "angular-new-app": {
       "source": "angular/skills",
@@ -13,25 +13,28 @@
       "skillPath": "angular-new-app/SKILL.md",
       "computedHash": "49bd84ab08bd3498c52f476bed48fbb942dc6dbc0925607e84549adbed34bccf"
     },
-    "astro": {
-      "source": "astrolicious/agent-skills",
-      "sourceType": "github",
-      "computedHash": "ebefe26b231d32379c14e41a46c2de7b4b0184543bedab7febdabe4fb21fba4e"
-    },
-    "create-readme": {
-      "source": "github/awesome-copilot",
-      "sourceType": "github",
-      "computedHash": "d0ece1b2164ce1376e4ab6e98d6ac079df3a2a94f5f02224362b6a1ce2516ae9"
-    },
     "frontend-design": {
       "source": "anthropics/skills",
       "sourceType": "github",
       "computedHash": "063a0e6448123cd359ad0044cc46b0e490cc7964d45ef4bb9fd842bd2ffbca67"
     },
-    "github-actions-docs": {
-      "source": "xixu-me/skills",
+    "github-actions-hardening": {
+      "source": "github/awesome-copilot",
       "sourceType": "github",
-      "computedHash": "e9ac24e79715ef3060bd4ae376052f8d863b830604e69cb513b39764bf47ee53"
+      "skillPath": "skills/github-actions-hardening/SKILL.md",
+      "computedHash": "10e35ff70fcf42e09295ffad0ac3203e4d6b6f74557cc3fa1654112b89e0eea2"
+    },
+    "grill-with-docs": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/grill-with-docs/SKILL.md",
+      "computedHash": "35e62aa423aaeab6a414bcac273f56dfb17802ef2334b41b6a3b00f28196c8cf"
+    },
+    "improve-codebase-architecture": {
+      "source": "mattpocock/skills",
+      "sourceType": "github",
+      "skillPath": "skills/engineering/improve-codebase-architecture/SKILL.md",
+      "computedHash": "2449db6ab1ded9581f69fcc56c1f64818112d05e271fd4c5da23c6523f9d3d9d"
     },
     "kotlin-springboot": {
       "source": "github/awesome-copilot",
@@ -39,41 +42,17 @@
       "skillPath": "skills/kotlin-springboot/SKILL.md",
       "computedHash": "beaa34d307bfcce5dd026e3b03c357f98f471b0de1b9fc6a0b7a64d132b74e95"
     },
-    "ngrx": {
-      "source": "oguzhan18/angular-ecosystem-skills",
-      "sourceType": "github",
-      "computedHash": "798812ef44d47cc6370d6c9466df7983e754860a24519c4e7b5f3c700648af99"
-    },
-    "nx-generate": {
-      "source": "nrwl/nx-ai-agents-config",
-      "sourceType": "github",
-      "computedHash": "7f465f7c7b023762c4517227a5ac9823f54d49fb5b492c61693d841a1a0ee355"
-    },
-    "nx-plugins": {
-      "source": "nrwl/nx-ai-agents-config",
-      "sourceType": "github",
-      "computedHash": "e93d10328f589667d6a7cc71d134c96b3c28ab4a1468eaec7bc29420c950e4e2"
-    },
-    "nx-run-tasks": {
-      "source": "nrwl/nx-ai-agents-config",
-      "sourceType": "github",
-      "computedHash": "e42dec15f588268887d88d606187b0fab9cbb3f90fd4ce41d66d2faffc9295c4"
-    },
-    "nx-workspace": {
-      "source": "nrwl/nx-ai-agents-config",
-      "sourceType": "github",
-      "computedHash": "32b7b72c54c6644e97ac8c8491e3cfa936afa6f8a86798214258d631367b4add"
-    },
     "spartan": {
       "source": "spartan-ng/spartan",
       "sourceType": "github",
       "skillPath": "skills/spartan/SKILL.md",
       "computedHash": "126d1eba31bef1c33c37ce3675bc20d0e74a5c2f42625d7837d5c8fae25234e5"
     },
-    "tailwind-design-system": {
-      "source": "wshobson/agents",
+    "unslop": {
+      "source": "cursor/plugins",
       "sourceType": "github",
-      "computedHash": "988d80e52c67c3692d43cc963b6a048a239895e88b272b061de55370d0f8efc3"
+      "skillPath": "pstack/skills/unslop/SKILL.md",
+      "computedHash": "3dfc2afeda677e12c6065497a40df7d895859de1c7d1cffb899b1559d129fe4f"
     }
   }
 }
