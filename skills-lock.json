@@ -13,11 +13,17 @@
       "skillPath": "angular-new-app/SKILL.md",
       "computedHash": "49bd84ab08bd3498c52f476bed48fbb942dc6dbc0925607e84549adbed34bccf"
     },
+    "astro": {
+      "source": "astrolicious/agent-skills",
+      "sourceType": "github",
+      "skillPath": "skills/astro/SKILL.md",
+      "computedHash": "c75e995c2dd55241e8dfb857acc22a8ebbf8fc330667a08582d138ae809a4a3a"
+    },
     "code-review": {
       "source": "mattpocock/skills",
       "sourceType": "github",
       "skillPath": "skills/engineering/code-review/SKILL.md",
-      "computedHash": "c2745e2be960b82b9fddd82cf45265f42431e7b045c403f297b25f0f311e9210"
+      "computedHash": "b242f1c48a6a937549a0e74ca2379189e85e4dd16516d76f58a7d03a6f1ac73b"
     },
     "domain-modeling": {
       "source": "mattpocock/skills",
@@ -36,6 +42,12 @@
       "sourceType": "github",
       "skillPath": "skills/frontend-design/SKILL.md",
       "computedHash": "89496d5dd00f4810205f351759594fc2742bf8eea85a2f2b2d1de59f4bd91576"
+    },
+    "github-actions-docs": {
+      "source": "xixu-me/skills",
+      "sourceType": "github",
+      "skillPath": "skills/github-actions-docs/SKILL.md",
+      "computedHash": "e9ac24e79715ef3060bd4ae376052f8d863b830604e69cb513b39764bf47ee53"
     },
     "github-actions-hardening": {
       "source": "github/awesome-copilot",
@@ -67,6 +79,12 @@
       "skillPath": "skills/kotlin-springboot/SKILL.md",
       "computedHash": "beaa34d307bfcce5dd026e3b03c357f98f471b0de1b9fc6a0b7a64d132b74e95"
     },
+    "ponytail-audit": {
+      "source": "dietrichgebert/ponytail",
+      "sourceType": "github",
+      "skillPath": "skills/ponytail-audit/SKILL.md",
+      "computedHash": "8b8d72e6ff70b65b6c9518d470fcf29dc696eea93d28f3efa10fdcc60cbd696d"
+    },
     "spartan": {
       "source": "spartan-ng/spartan",
       "sourceType": "github",
@@ -83,7 +101,7 @@
       "source": "cursor/plugins",
       "sourceType": "github",
       "skillPath": "pstack/skills/unslop/SKILL.md",
-      "computedHash": "eca0ad9fa3a3867c83f3aaf3a058e247a569c8976a68ca423a569b93eb86de5d"
+      "computedHash": "2e57ee5eac607dd836feb9cbb1bfa92bfe3cbb50c195dfcc3ae021e591efefe4"
     },
     "wayfinder": {
       "source": "mattpocock/skills",
