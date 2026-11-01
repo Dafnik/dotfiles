@@ -7,13 +7,13 @@ Update them from the dotfiles root:
 
 ```sh
 cd ~/dotfiles
-npx skills update --project
+vpx skills update --project
 ```
 
 Add skills from the same directory without `--global`:
 
 ```sh
-npx skills add <owner/repo> --skill <skill-name>
+vpx skills add <owner/repo> --skill <skill-name>
 ```
 
 Skills live in `.agents/skills`. The existing `~/.agents` symlink points to
