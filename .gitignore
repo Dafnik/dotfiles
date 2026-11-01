@@ -1,1 +1,5 @@
 .idea
+.DS_Store
+
+# Skills CLI global state. Manage skills through the root skills-lock.json.
+/.agents/.skill-lock.json

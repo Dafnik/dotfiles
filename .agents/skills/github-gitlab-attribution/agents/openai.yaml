@@ -1,0 +1,7 @@
+interface:
+  display_name: "GitHub and GitLab attribution"
+  short_description: "Credit the acting AI model on Dafnik's behalf"
+  default_prompt: "Use $github-gitlab-attribution to add the acting model and version to this GitHub or GitLab post on Dafnik's behalf."
+
+policy:
+  allow_implicit_invocation: true
