@@ -13,12 +13,6 @@
       "skillPath": "angular-new-app/SKILL.md",
       "computedHash": "49bd84ab08bd3498c52f476bed48fbb942dc6dbc0925607e84549adbed34bccf"
     },
-    "astro": {
-      "source": "astrolicious/agent-skills",
-      "sourceType": "github",
-      "skillPath": "skills/astro/SKILL.md",
-      "computedHash": "c75e995c2dd55241e8dfb857acc22a8ebbf8fc330667a08582d138ae809a4a3a"
-    },
     "code-review": {
       "source": "mattpocock/skills",
       "sourceType": "github",
